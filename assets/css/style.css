@@ -1,24 +1,25 @@
+@font-face {
+  font-family: 'AdventureTime';
+  src: url('/assets/fonts/Adventure Time Logo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   height: 100%; /* Ensure they cover the full viewport height */
   margin: 0;     /* Remove default margin */
   padding: 0;    /* Remove default padding */
-  font-family: Arial, sans-serif; /* Set a default font */
   
-}
-body {
-  background-image: linear-gradient(133.72deg, #FBFEFF 16.05%, #FBFEFF 16.06%, #FBFEFF 16.06%, #7BCBF9 84.31%); /* Example gradient */
-  /* Or with more colors: */
-  /* background-image: linear-gradient(to bottom, blue, purple, red); */
 }
 
 .container-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 20px;
+  z-index: 4;
 }
 .container-grid{
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
   padding: 10px;
   border-radius: 5px;
 }
@@ -27,63 +28,81 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-width: 94vw;
-height: 110rem;
+width: 90vw;
+height: 40rem;
 
 background: linear-gradient(133.72deg, #FBFEFF 16.05%, #FBFEFF 16.06%, #FBFEFF 16.06%, #7BCBF9 84.31%);
 box-shadow: 0rem 0.5rem 2rem rgba(0, 0, 0, 0.25);
-border-radius: 100rem;
-margin: 10em;
+border-radius: 10rem;
+margin-left: 5em;
+margin-top: 2.5em;
+margin-bottom: 2.5em;
 
 /* Inside auto layout */
 flex: none;
 order: 0;
 align-self: stretch;
+  z-index: 4;
+
 }
-.text1{
-    margin: 10rem;
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
+.adventure-text {
+  font-family: 'Breezy', sans-serif;  /* Use Breezy font */
   font-size: 2rem;
-  line-height: 3rem;
-  text-align: left;
-
-  color: #000000;
-
-  /* Inside auto layout */
-  
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+  color: #ffcc00; /* A color to match the bright, cartoonish style */
 }
+.text1{ 
+  margin: 10rem; 
+  font-family: 'Arial'; 
+  font-style: normal; 
+  font-weight: 400; 
+  font-size: 2rem; 
+  line-height: 3rem; 
+  text-align: left; 
+  color: #000000; 
+  
+  /* Inside auto layout */ 
+  flex: none; 
+  order: 0; 
+  align-self: 
+  stretch; 
+  flex-grow: 0; 
+}
+
 .showcase {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    border-radius: 1rem;
-    height: 50rem;
-    width: 94vw;
-    margin: 10em;
+    border-radius: .5rem;
+    height: 20rem;
+    width: 90vw;
+    margin-left: 8em;
+    
 }
 
-.text_grid{
-    display: grid;
-    grid-template-rows: .1fr 1fr;
-
-  margin: 20rem;
-  font-family: 'Arial';
-  font-style: normal;
-  font-size: 2rem;
-  text-align: left;
-
-  color: #000000;
+.text_grid {
+  display: grid;
+  grid-template-rows: 0.1fr 1fr; /* Adjusted to have a valid fractional unit */
   
+  margin: 5rem;
+  
+  /* Apply the Adventure Time-inspired font */
+  font-family: 'Breezy', sans-serif; 
+  font-style: normal;
+  font-weight: 400;  /* Regular weight */
+  font-size: 1.5rem; /* Adjusted font size */
+  text-align: left;  /* Left align text */
+  
+  color: #000000;  /* Text color */
 }
+
 .p{
-    font-size: 1rem;
+    font-size: .3rem;
     margin: 0;
     padding: 0;
+}
+.text_grid h1{
+  font-family: 'AdventureTime'; /* Set a default font */
+  font-size: 5rem;
+
 }
 
 .box1 , .box2, .box3, .box4 ,.box5{
@@ -91,6 +110,69 @@ align-self: stretch;
   height: auto;
   background: #51c2ff;
   border-radius: 1rem;
-  margin: 5rem;
+    z-index: 4;
+
 }
+
+
+.frame_character {
+  margin:auto;
+  max-width: 84rem;          /* max size */
+  width: 100%;               /* shrink on smaller screens */
+  aspect-ratio: 1 / 1;       /* keeps it a square */
+  border-radius: 50%;        /* circular frame */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #4cafef; /* frame color */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.frame_character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.circle-frame {
+  width: 35rem; /* Adjust the size */
+  height: 35rem; /* Make it a square to keep the aspect ratio */
+  overflow: hidden; /* Hide anything outside the circle */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15rem;
+  margin-top: 2.5rem;
+}
+
+.circle-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the circle while maintaining its aspect ratio */
+}
+.background{
+  position: absolute; /* Position it relative to the nearest positioned ancestor (usually the body or html) */
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image */
+  z-index: 1; /* Push the div behind all other content */
+
+  width: 100vw;
+}
+.background img{
+  width: 100vw;
+  height: 100vh;
+}
+.frosted_glass{
+  position: absolute;
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+  z-index: 2;
+}
+
 
