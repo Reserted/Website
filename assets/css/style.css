@@ -1,0 +1,96 @@
+html,
+body {
+  height: 100%; /* Ensure they cover the full viewport height */
+  margin: 0;     /* Remove default margin */
+  padding: 0;    /* Remove default padding */
+  font-family: Arial, sans-serif; /* Set a default font */
+  
+}
+body {
+  background-image: linear-gradient(133.72deg, #FBFEFF 16.05%, #FBFEFF 16.06%, #FBFEFF 16.06%, #7BCBF9 84.31%); /* Example gradient */
+  /* Or with more colors: */
+  /* background-image: linear-gradient(to bottom, blue, purple, red); */
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+}
+.container-grid{
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
+}
+/* Card */
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+width: 94vw;
+height: 110rem;
+
+background: linear-gradient(133.72deg, #FBFEFF 16.05%, #FBFEFF 16.06%, #FBFEFF 16.06%, #7BCBF9 84.31%);
+box-shadow: 0rem 0.5rem 2rem rgba(0, 0, 0, 0.25);
+border-radius: 100rem;
+margin: 10em;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+}
+.text1{
+    margin: 10rem;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: left;
+
+  color: #000000;
+
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-radius: 1rem;
+    height: 50rem;
+    width: 94vw;
+    margin: 10em;
+}
+
+.text_grid{
+    display: grid;
+    grid-template-rows: .1fr 1fr;
+
+  margin: 20rem;
+  font-family: 'Arial';
+  font-style: normal;
+  font-size: 2rem;
+  text-align: left;
+
+  color: #000000;
+  
+}
+.p{
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.box1 , .box2, .box3, .box4 ,.box5{
+  width: 80%;
+  height: auto;
+  background: #51c2ff;
+  border-radius: 1rem;
+  margin: 5rem;
+}
+
