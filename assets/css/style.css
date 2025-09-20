@@ -132,52 +132,23 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
+.frame_character {
+  margin: auto;
+  max-width: 84rem; /* max size */
+  width: 100%; /* shrink on smaller screens */
+  aspect-ratio: 1 / 1; /* keeps it a square */
+  border-radius: 50%; /* circular frame */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #4cafef; /* frame color */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
 .frame_character img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.circle-frame {
-  width: 35rem; /* Adjust the size */
-  height: 35rem; /* Make it a square to keep the aspect ratio */
-  overflow: hidden; /* Hide anything outside the circle */
-  border-radius: 50%; /* Make it circular */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 15rem;
-  margin-top: 2.5rem;
-}
-
-.circle-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fills the circle while maintaining its aspect ratio */
-}
-.background {
-  position: absolute; /* Position it relative to the nearest positioned ancestor (usually the body or html) */
-  background-size: cover; /* Ensures the image covers the div */
-  background-position: center; /* Centers the image */
-  z-index: 1; /* Push the div behind all other content */
-
-  width: 100vw;
-}
-.background img {
-  width: 100vw;
-  height: 100vh;
-}
-.frosted_glass {
-  position: absolute;
-  background-size: cover; /* Ensures the image covers the div */
-  background-position: center; /* Centers the image */
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
-  z-index: 2;
-}
-h1.display-1 {
-  font-family: "AdventureTime", sans-serif;
-  color: red; /* Just to test */
 }
