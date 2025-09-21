@@ -7,11 +7,17 @@
 
 html,
 body {
-  height: 100%; /* Ensure they cover the full viewport height */
   margin: 0;     /* Remove default margin */
   padding: 0;    /* Remove default padding */
-  
+
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), 
+    url("bg.png") center center no-repeat;
+
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 
 .container-grid {
   display: grid;
@@ -23,6 +29,7 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
+
 /* Card */
 .card{
     display: grid;
@@ -31,7 +38,7 @@ body {
 width: 90vw;
 height: 40rem;
 
-background: linear-gradient(133.72deg, #FBFEFF 16.05%, #FBFEFF 16.06%, #FBFEFF 16.06%, #7BCBF9 84.31%);
+background: linear-gradient(133.72deg, #97c976 13%, #265ecd 30%, #689c3f 100%, #3b8ac5 30%);
 box-shadow: 0rem 0.5rem 2rem rgba(0, 0, 0, 0.25);
 border-radius: 10rem;
 margin-left: 5em;
@@ -75,23 +82,26 @@ align-self: stretch;
     height: 20rem;
     width: 90vw;
     margin-left: 8em;
-    
+}
+
+.showcase div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
 }
 
 .text_grid {
   display: grid;
-  grid-template-rows: 0.1fr 1fr; /* Adjusted to have a valid fractional unit */
-  
-  margin: 5rem;
-  
-  /* Apply the Adventure Time-inspired font */
+  grid-template-rows: auto 1fr; 
+  margin: 2rem;  /* reduced from 5rem */
   font-family: 'Breezy', sans-serif; 
   font-style: normal;
-  font-weight: 400;  /* Regular weight */
-  font-size: 1.5rem; /* Adjusted font size */
-  text-align: left;  /* Left align text */
-  
-  color: #000000;  /* Text color */
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: justify;
 }
 
 .p{
@@ -99,10 +109,11 @@ align-self: stretch;
     margin: 0;
     padding: 0;
 }
-.text_grid h1{
-  font-family: 'AdventureTime'; /* Set a default font */
-  font-size: 5rem;
 
+.text_grid h1 {
+  font-family: 'AdventureTime';
+  font-size: 5rem;
+  margin-bottom: 1rem; /* bring paragraph closer to title */
 }
 
 .box1 , .box2, .box3, .box4 ,.box5{
@@ -111,9 +122,7 @@ align-self: stretch;
   background: #51c2ff;
   border-radius: 1rem;
     z-index: 4;
-
 }
-
 
 .frame_character {
   margin:auto;
@@ -153,24 +162,4 @@ align-self: stretch;
   height: 100%;
   object-fit: cover; /* Ensures the image fills the circle while maintaining its aspect ratio */
 }
-.background{
-  position: absolute; /* Position it relative to the nearest positioned ancestor (usually the body or html) */
-  background-size: cover; /* Ensures the image covers the div */
-  background-position: center; /* Centers the image */
-  z-index: 1; /* Push the div behind all other content */
 
-  width: 100vw;
-}
-.background img{
-  width: 100vw;
-  height: 100vh;
-}
-.frosted_glass{
-  position: absolute;
-  background-size: cover; /* Ensures the image covers the div */
-  background-position: center; /* Centers the image */
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
-  z-index: 2;
-}
