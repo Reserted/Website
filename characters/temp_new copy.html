@@ -10,7 +10,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <style>
       body {
         min-height: 200vh; /* force scroll */
@@ -132,9 +133,55 @@
       .my-background-div {
         background-image: url("/assets/477510.jpg");
       }
+      .carousel-img {
+        max-width: 250px; /* adjust image size */
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        opacity: 0.5; /* default faded */
+      }
+
+      .carousel-img.center {
+        opacity: 1;
+        transform: scale(1.05); /* pop effect */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+      /* Showcase Carousel */
+      .showcase {
+        width: 1282px;
+        height: auto;
+        border-radius: 20px;
+        background: transparent;
+        margin: 0 auto;
+      }
+
+      .showcase .swiper-slide {
+        aspect-ratio: 481 / 273;
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+        transform: scale(0.9);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .showcase .swiper-slide-active {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .showcase img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     </style>
   </head>
   <body>
+    
     <div
       class="bg-image"
       style="
@@ -145,6 +192,7 @@
         height: 200vh;
       "
     >
+    
       <!-- Navbar -->
       <nav
         id="mainNavbar"
@@ -195,103 +243,14 @@
                   >Click-Me!</a
                 >
               </div>
+              
             </div>
+            
           </div>
         </div>
       </div>
+      
 
-      <!-- 5 Column Image Grid -->
-      <div class="container my-4">
-        <div class="row g-3 text-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="ice_king.jpg"
-              class="img-fluid rounded gallery-img"
-              alt="Image 1"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="ice_king.jpg"
-              class="img-fluid rounded gallery-img"
-              alt="Image 2"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="ice_king.jpg"
-              class="img-fluid rounded gallery-img"
-              alt="Image 3"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="ice_king.jpg"
-              class="img-fluid rounded gallery-img"
-              alt="Image 4"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="ice_king.jpg"
-              class="img-fluid rounded gallery-img"
-              alt="Image 5"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="https://picsum.photos/200?random=6"
-              class="img-fluid rounded gallery-img"
-              alt="Image 6"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="lightbox" class="lightbox">
-      <span class="close">&times;</span>
-      <img class="lightbox-content" id="lightbox-img" />
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Auto-hide Navbar Script -->
-    <script>
-      const navbar = document.getElementById("mainNavbar");
-      let lastScrollY = window.scrollY;
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > lastScrollY) {
-          navbar.classList.add("navbar-hidden");
-        } else {
-          navbar.classList.remove("navbar-hidden");
-        }
-        lastScrollY = window.scrollY;
-      });
-    </script>
-    <script>
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      const closeBtn = document.querySelector(".close");
-
-      document.querySelectorAll(".gallery-img").forEach((img) => {
-        img.addEventListener("click", () => {
-          lightbox.style.display = "flex";
-          lightboxImg.src = img.src; // 🔑 make sure src is passed
-        });
-      });
-
-      closeBtn.addEventListener("click", () => {
-        lightbox.style.display = "none";
-      });
-
-      // close on clicking outside
-      lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-          lightbox.style.display = "none";
-        }
-      });
-    </script>
+    
   </body>
 </html>
