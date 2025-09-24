@@ -50,7 +50,6 @@
 
       /* Card */
       .custom-card {
-        border-radius: 1rem;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         overflow: hidden;
       }
@@ -132,9 +131,30 @@
       .close:hover {
         color: #ddd;
       }
+      .gallery-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      .gallery-img:hover {
+        transform: scale(1.03);
+      }
+      .image-container {
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
     </style>
   </head>
   <body>
+    <audio
+      id="myAudio"
+      src="/assets/images/landing page/come.mp3"
+      autoplay
+      loop
+    ></audio>
     <nav
       id="mainNavbar"
       class="navbar navbar-expand-lg shadow-sm flex-column fade-navbar sticky-top"
@@ -147,13 +167,13 @@
       </a>
     </nav>
     <div class="container-fluid p-5">
-      <h1 class="display-1">Adventure Time</h1>
+      <h1 class="display-1">Come along with Me!</h1>
       <h3>Welcome to the Ultimate Adventure Time Fansite!</h3>
       <p>
         Get ready to embark on an epic journey through the Land of Ooo! Whether
         you're a fan of Finn and Jake’s wild adventures or love the quirky
-        characters like Princess Bubblegum, Marceline, and the Ice King, this is
-        your one-stop destination for everything Adventure Time!
+        characters like Marceline, and the Ice King, this is your one-stop
+        destination for everything Adventure Time!
       </p>
     </div>
 
@@ -161,14 +181,69 @@
       <img src="/assets/images/477510.jpg" class="card-img-top" alt="..." />
 
       <div class="card-body p-5">
-        <h2 class="card-title display-4">Card title</h2>
+        <h2 class="card-title display-4">Let's Adventure!</h2>
         <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
+          Imagine this—you can actually see every character in all their glory
+          with a full image gallery for each one. Jake doing his stretchy, goofy
+          poses, Marceline rocking out with her bass, Ice King in all his icy,
+          chaotic glory, and Finn ready to swing his sword into action. It’s
+          like having a little snapshot of the Land of Ooo right at your
+          fingertips!
         </p>
-        <p class="card-text">
-          <small class="text-body-secondary">Last updated 3 mins ago</small>
-        </p>
+        <p class="card-text"></p>
+      </div>
+    </div>
+    <div class="container my-5">
+      <h1 class="text-center mb-4"></h1>
+
+      <div class="row">
+        <!-- Image 1 -->
+        <div class="col-md-3 col-sm-6">
+          <a href="#" class="image-link">
+            <img
+              src="/assets/images/landing page/1.png"
+              class="gallery-img"
+              alt="Dog"
+            />
+            <div class="image-caption"></div>
+          </a>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="col-md-3 col-sm-6">
+          <a href="#" class="image-link">
+            <img
+              src="/assets/images/landing page/2.jpg"
+              class="gallery-img"
+              alt="Mountain"
+            />
+            <div class="image-caption"></div>
+          </a>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="col-md-3 col-sm-6">
+          <a href="#" class="image-link">
+            <img
+              src="/assets/images/landing page/3.jpg"
+              class="gallery-img"
+              alt="River"
+            />
+            <div class="image-caption"></div>
+          </a>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="col-md-3 col-sm-6">
+          <a href="#" class="image-link">
+            <img
+              src="/assets/images/landing page/4.jpg"
+              class="gallery-img"
+              alt="Forest"
+            />
+            <div class="image-caption"></div>
+          </a>
+        </div>
       </div>
     </div>
   </body>
