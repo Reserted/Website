@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure Time Fansite</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        --s: 140px; /* control the size */
+        --c1: #ab3e5b;
+        --c2: #ffbe40;
+
+        --_g: #0000 25%, #0008 47%, var(--c1) 53% 147%, var(--c2) 153% 247%,
+          var(--c1) 253% 347%, var(--c2) 353% 447%, var(--c1) 453% 547%,
+          #0008 553%, #0000 575%;
+
+        background: radial-gradient(circle calc(25% / 3) at 50% 50%, var(--_g)),
+          radial-gradient(circle calc(25% / 3) at 50% 50%, var(--_g))
+            calc(var(--s) / 2) calc(3 * var(--s) / 4),
+          radial-gradient(circle calc(25% / 3) at 50% 50%, var(--_g))
+            calc(var(--s) / 2) 0,
+          radial-gradient(circle calc(25% / 3) at 50% 50%, var(--_g)) 0
+            calc(3 * var(--s) / 4),
+          repeating-linear-gradient(
+            90deg,
+            #accec0 calc(25% / -6) calc(25% / 6),
+            #61a6ab 0 calc(25% / 2)
+          );
+
+        background-size: var(--s) calc(3 * var(--s) / 2);
+        animation: m 2.5s infinite linear;
+        background-attachment: fixed; /* keeps background steady while scrolling */
+      }
+
+      @keyframes m {
+        to {
+          background-position: var(--s) 0,
+            calc(var(--s) / -2) calc(3 * var(--s) / 4), calc(3 * var(--s) / 2) 0,
+            calc(-1 * var(--s)) calc(3 * var(--s) / 4), 0 0;
+        }
+      }
+
+      .card {
+        margin: 3rem auto;
+        max-width: 800px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg sticky-top justify-content-center bg-light shadow"
+    >
+      <a class="navbar-brand" href="#">
+        <img
+          src="Adventure_Time_(1).svg"
+          width="200rem"
+          height="200rem"
+          alt="Adventure Time Logo"
+        />
+      </a>
+    </nav>
+
+    <div class="container-fluid text-center text-light p-5">
+      <h1 class="display-1">Adventure Time</h1>
+      <h3>Welcome to the Ultimate Adventure Time Fansite!</h3>
+      <p>
+        Get ready to embark on an epic journey through the Land of Ooo! Whether
+        you're a fan of Finn and Jake’s wild adventures or love the quirky
+        characters like Princess Bubblegum, Marceline, and the Ice King, this is
+        your one-stop destination for everything Adventure Time!
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="/assets/1.jpg" class="card-img-top" alt="..." />
+      <div class="card-body p-5">
+        <h2 class="card-title display-4">Card title</h2>
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural lead-in
+          to additional content. This content is a little bit longer.
+        </p>
+        <p class="card-text">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
