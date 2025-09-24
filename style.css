@@ -1,11 +1,164 @@
+@font-face {
+  font-family: 'AdventureTime';
+  src: url('/assets/fonts/adventure.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+html,
 body {
-    margin: 0;  
+  margin: 0;     /* Remove default margin */
+  padding: 0;    /* Remove default padding */
+
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), 
+    url("bg.png") center center no-repeat;
+
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  z-index: 4;
+}
+.container-grid{
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Card */
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+width: 90vw;
+height: 40rem;
+
+background: linear-gradient(133.72deg, #97c976 13%, #265ecd 30%, #689c3f 100%, #3b8ac5 30%);
+box-shadow: 0rem 0.5rem 2rem rgba(0, 0, 0, 0.25);
+border-radius: 10rem;
+margin-left: 5em;
+margin-top: 2.5em;
+margin-bottom: 2.5em;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+  z-index: 4;
+
+}
+.adventure-text {
+  font-family: 'Breezy', sans-serif;  /* Use Breezy font */
+  font-size: 2rem;
+  color: #ffcc00; /* A color to match the bright, cartoonish style */
+}
+.text1{ 
+  margin: 10rem; 
+  font-family: 'Arial'; 
+  font-style: normal; 
+  font-weight: 400; 
+  font-size: 2rem; 
+  line-height: 3rem; 
+  text-align: left; 
+  color: #000000; 
+  
+  /* Inside auto layout */ 
+  flex: none; 
+  order: 0; 
+  align-self: 
+  stretch; 
+  flex-grow: 0; 
+}
+
+.showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-radius: .5rem;
+    height: 20rem;
+    width: 90vw;
+    margin-left: 8em;
+}
+
+.showcase div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+}
+
+.text_grid {
+  display: grid;
+  grid-template-rows: auto 1fr; 
+  margin: 2rem;  /* reduced from 5rem */
+  font-family: 'Breezy', sans-serif; 
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: justify;
+}
+
+.p{
+    font-size: .3rem;
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-image: url("477510.jpg"); /* Replace with your image path */
-    background-size: cover; /* Scales the image to cover the entire element */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center bottom; /* Centers the image */
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+.text_grid h1 {
+  font-family: 'AdventureTime';
+  font-size: 5rem;
+  margin-bottom: 1rem; /* bring paragraph closer to title */
+}
+
+.box1 , .box2, .box3, .box4 ,.box5{
+  width: 80%;
+  height: auto;
+  background: #51c2ff;
+  border-radius: 1rem;
+    z-index: 4;
+}
+
+.frame_character {
+  margin:auto;
+  max-width: 84rem;          /* max size */
+  width: 100%;               /* shrink on smaller screens */
+  aspect-ratio: 1 / 1;       /* keeps it a square */
+  border-radius: 50%;        /* circular frame */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #4cafef; /* frame color */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.frame_character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.circle-frame {
+  width: 35rem; /* Adjust the size */
+  height: 35rem; /* Make it a square to keep the aspect ratio */
+  overflow: hidden; /* Hide anything outside the circle */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15rem;
+  margin-top: 2.5rem;
+}
+
+.circle-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the circle while maintaining its aspect ratio */
 }
